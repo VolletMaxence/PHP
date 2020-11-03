@@ -1,4 +1,5 @@
 <?php
+  session_start();
 
   define('LOGIN','Julien');  
   define('MDP','1234');  
@@ -8,43 +9,48 @@
   // Si le tableau $_POST existe alors le formulaire a été envoyé
   if(!empty($_POST))
   {
-    // Le login est-il rempli ?
+    //si pas de login :
     if(empty($_POST['login']))
     {
       $message = 'Veuillez indiquer votre login svp !';
     }
-      // Le mot de passe est-il rempli ?
+      // si pas de MDP
       elseif(empty($_POST['motDePasse']))
     {
       $message = 'Veuillez indiquer votre mot de passe svp !';
     }
 
     //Vérif Login
+    //Si les 2 valeurs sont fausses : 
     elseif($_POST['motDePasse'] !== MDP and $_POST['login'] !== LOGIN)
     {
       $message = 'Votre login et votre mot de passe sont faux !';
     }
-
+    //Si uniquement le login est faux :
       elseif($_POST['login'] !== LOGIN)
     {
       $message = 'Votre login est faux !';
     }
-
+    //Si uniquement le MDP est faux :
       elseif($_POST['motDePasse'] !== MDP)
     {
       $message = 'Votre mot de passe est faux !';
     }
-    
+    //Si tout est bon : affichage "bienvenue" + boutton pour détruir session + cacher formulaire
       else
     {
       $message = 'Bienvenue !';
-      echo '<button name="valider"
+      echo '<button name="Logout"
       type="submit"
-      value="destroy"
-      action="session_destroy()">
+      value="session_destroy()">
       Se déconnecter
       </button>';
     }
+
+    if (isset($_POST['Logout']))
+      {
+        session_destroy();
+      } 
   }
 ?>
 
