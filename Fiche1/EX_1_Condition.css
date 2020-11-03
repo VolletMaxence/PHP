@@ -1,0 +1,15 @@
+div.pair {
+    background-color: red;
+}
+
+div.impair {
+    background-color: blue;
+}
+
+div.rouge {
+    color: red;
+}
+
+div.violet {
+    color: magenta;
+}
