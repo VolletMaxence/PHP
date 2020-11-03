@@ -22,19 +22,19 @@
 
     //Vérif Login
     //Si les 2 valeurs sont fausses : 
-    elseif($_POST['motDePasse'] !== MDP and $_POST['login'] !== LOGIN)
+    elseif($_POST['motDePasse'] !== MDP && $_POST['login'] !== LOGIN)
     {
-      $message = 'Votre login et votre mot de passe sont faux !';
+      $message = 'Votre login et votre mot de passe sont faux ,veuillez réessayer';
     }
     //Si uniquement le login est faux :
       elseif($_POST['login'] !== LOGIN)
     {
-      $message = 'Votre login est faux !';
+      $message = 'Le login n est pas reconnu';
     }
     //Si uniquement le MDP est faux :
       elseif($_POST['motDePasse'] !== MDP)
     {
-      $message = 'Votre mot de passe est faux !';
+      $message = 'Votre mot de passe est incorrecte';
     }
     //Si tout est bon : affichage "bienvenue" + boutton pour détruir session + cacher formulaire
       else
