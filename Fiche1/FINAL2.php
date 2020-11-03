@@ -45,12 +45,14 @@
       value="session_destroy()">
       Se déconnecter
       </button>';
-    }
 
-    if (isset($_POST['Logout']))
+      if (isset($_POST['Logout']))
       {
         session_destroy();
-      } 
+      }
+    }
+
+     
   }
 ?>
 
