@@ -162,7 +162,7 @@
         ?>
 
         <li>    
-            <a href="index.html"> 
+            <a href="../Page liste d exo PHP.html"> 
                 Retour à la page index 
             </a> 
         </li>

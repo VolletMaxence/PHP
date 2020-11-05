@@ -7,7 +7,7 @@
             include ("Liste_Fonction.php");
 
             $val1='khd';
-            $val2='gezg';
+            $val2='gezg'; 
             $val3='oy,';
             $p1=44;
             $p2=63;
@@ -18,7 +18,7 @@
         ?>
 
         <li> 
-            <a href="index.html"> 
+            <a href="../Page liste d exo PHP.html"> 
                 Retour à la page index 
             </a> 
         </li>
