@@ -25,11 +25,7 @@
             $list = tableau($p1, $p2, $p3);
         ?>
 
-        <li> 
-            <a href="../Page liste d exo PHP.html"> 
-                Retour à la page indx
-            </a> 
-        </li>
+
 
     </body>
 </html>

@@ -28,7 +28,7 @@
             if($verif=0)
             {
                 //afficher formulaire + message d'erreur
-                $phrase='Mod de Passe éroné, veuillez l entré a nouveau :';
+                $phrase='Mot de Passe éroné, veuillez l entré à nouveau :';
                 formulaire($phrase);
 
             } elseif($verif=1)
@@ -40,11 +40,7 @@
             }
         ?>
 
-        <li> 
-            <a href="../Page liste d exo PHP.html"> 
-                Retour à la page index 
-            </a> 
-        </li>
+
 
     </body>
 </html>
