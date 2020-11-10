@@ -158,6 +158,7 @@
             function correct($phrase)
             {
                 echo $phrase;
+                echo '<a href="FINAL_secret.php"> Page secrète </a>';
             }
         ?>
 

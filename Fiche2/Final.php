@@ -7,42 +7,28 @@
         <?php
             include "Liste_Fonction.php";
 
-            //affichage formulaire par défault
-            $verif=2;
+            $recupMDP;
+                    
+                //récupération de la valeur entré
 
-            if($verif=2)
-            {
-                $phrase='Veuillez entrer votre Mot de passe';
-                formulaire($phrase); //formulaire : boutton qui change la valeur de $verif
-            }
+            $recupMDP=$_POST['MDP'];
 
-            if(!isset($_POST['MDP']) == "1234");
+            if($recupMDP != '1234')
             {
-                $verif=1;
-            } 
-            if(!isset($_POST['MDP']) !== "1234");
-            {
-                $verif=0;
-            }
-
-            if($verif=0)
-            {
-                //afficher formulaire + message d'erreur
-                $phrase='Mot de Passe éroné, veuillez l entré à nouveau :';
+                //afficher formulaire de base
+                $phrase='Veuillez entrer (à nouveau) votre Mot de Passe :';
                 formulaire($phrase);
-
-            } elseif($verif=1)
+            } elseif($recupMDP == '1234')
             {
                 // cacher formulaire + afficher lien
                 $phrase = 'Mot de passe valide, voici le lien :';
                 correct($phrase);
-                
             }
         ?>
 
 
 
-    </body>
+    </body> 
 </html>
 
 <!-- Afficher formulaire par défaut -->
